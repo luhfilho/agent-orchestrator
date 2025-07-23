@@ -1,0 +1,68 @@
+# Agent Orchestrator - Configuração Avançada
+# Arquivo de configuração principal
+
+# Configuração de Agentes
+agents:
+  # Claude Configuration
+  claude_api_key: null  # Configure sua API key do Claude
+  claude_model: "claude-3.5-sonnet-20241022"
+  claude_timeout: 300
+  claude_max_retries: 3
+  claude_personas:
+    - "dev"
+    - "sm"
+    - "qa"
+    - "pm"
+    - "po"
+  
+  # Gemini Configuration
+  gemini_api_key: null  # Configure sua API key do Gemini
+  gemini_model: "gemini-1.5-flash"
+  gemini_timeout: 120
+  gemini_max_retries: 2
+  gemini_mcp_servers: []
+  
+  # Configurações Gerais
+  auto_fallback: true
+  preferred_agent: "auto"
+
+# Configuração de Templates
+templates:
+  templates_dir: "./templates"
+  custom_templates: {}
+  validation_enabled: true
+  auto_validate: true
+
+# Configuração de Integrações
+integrations:
+  github_token: null  # Token do GitHub para integração
+  jira_url: null      # URL do Jira
+  jira_username: null # Usuário do Jira
+  jira_password: null # Senha do Jira
+  slack_webhook: null # Webhook do Slack
+  email_smtp: null    # Servidor SMTP
+  email_username: null # Usuário do email
+  email_password: null # Senha do email
+
+# Configuração de Logging
+logging:
+  log_level: "INFO"
+  log_dir: "./logs"
+  max_file_size: 10485760  # 10MB
+  backup_count: 5
+  json_format: true
+  console_output: true
+  file_output: true
+  rotation_enabled: true
+
+# Configuração de Performance
+performance:
+  max_concurrent_tasks: 5
+  task_timeout: 300
+  cache_enabled: true
+  cache_ttl: 3600  # 1 hora
+  retry_attempts: 3
+  retry_delay: 1.0
+
+# Estratégia de Reload de Configuração
+reload_strategy: "manual"  # manual, auto, watch 

@@ -1,0 +1,49 @@
+agents:
+  auto_fallback: true
+  claude_api_key: null
+  claude_max_retries: 3
+  claude_model: claude-3.5-sonnet-20241022
+  claude_personas:
+  - dev
+  - sm
+  - qa
+  - pm
+  - po
+  claude_timeout: 300
+  gemini_api_key: null
+  gemini_max_retries: 2
+  gemini_mcp_servers: []
+  gemini_model: gemini-1.5-flash
+  gemini_timeout: 120
+  preferred_agent: auto
+integrations:
+  email_password: null
+  email_smtp: null
+  email_username: null
+  github_token: null
+  jira_password: null
+  jira_url: null
+  jira_username: null
+  slack_webhook: null
+logging:
+  backup_count: 5
+  console_output: true
+  file_output: true
+  json_format: true
+  log_dir: logs
+  log_level: INFO
+  max_file_size: 10485760
+  rotation_enabled: true
+performance:
+  cache_enabled: true
+  cache_ttl: 3600
+  max_concurrent_tasks: 5
+  retry_attempts: 3
+  retry_delay: 1.0
+  task_timeout: 300
+reload_strategy: manual
+templates:
+  auto_validate: true
+  custom_templates: {}
+  templates_dir: templates
+  validation_enabled: true
