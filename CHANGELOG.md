@@ -2,6 +2,23 @@
 
 Todas as mudanças notáveis neste projeto serão documentadas neste arquivo.
 
+## [2.0.0] - 2025-07-24
+
+### Changed
+- **Agent Padrão**: Claude Code agora é o agente padrão para todas as operações
+- **Autenticação Gemini**: Corrigida autenticação para usar padrões do CLI sem forçar API keys
+- **Sistema de Logs**: Completamente reescrito para ser 100% humanizado e sem duplicações
+- **URLs do Repositório**: Atualizadas todas as URLs para https://github.com/luhfilho/agent-orchestrator/
+
+### Added
+- **Guia PyPI**: Documentação completa para publicação no PyPI
+- **README Humanizado**: README reescrito com linguagem simples e exemplos práticos
+
+### Fixed
+- **Erro 429 Gemini**: Corrigido problema de rate limit com autenticação adequada
+- **Logs Duplicados**: Removidas todas as duplicações de log
+- **Comando Gemini**: Corrigida sintaxe do comando para usar --prompt
+
 ## [1.0.0] - 2025-07-23
 
 ### Added

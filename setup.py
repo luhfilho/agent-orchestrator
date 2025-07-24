@@ -19,7 +19,7 @@ def read_requirements():
 
 setup(
     name="agent-orchestrator",
-    version="1.0.0",
+    version="2.0.0",
     author="Agent Orchestrator Team",
     author_email="team@agent-orchestrator.dev",
     description="Orquestrador de Agentes de IA para Desenvolvimento de Software",
