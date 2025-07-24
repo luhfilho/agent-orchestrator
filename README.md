@@ -279,6 +279,6 @@ MIT - Use livremente em seus projetos!
 
 ---
 
-**Feito com ❤️ pela comunidade Agent Orchestrator**
+**Feito com ❤️ por @luhfilho
 
 *Transformando ideias em código, uma tarefa por vez!* 🚀
