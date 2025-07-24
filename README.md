@@ -1,321 +1,284 @@
-# Agent Orchestrator - Orquestrador de Agentes de IA
+# 🚀 Agent Orchestrator
 
-## 🎯 Visão Geral
+**Transforme suas ideias em código automaticamente!** O Agent Orchestrator é uma ferramenta que usa IA para automatizar o desenvolvimento de software. Basta escrever o que você quer fazer e ele cuida do resto.
 
-O **Agent Orchestrator** é uma ferramenta open source que automatiza o processo de desenvolvimento de software através da orquestração inteligente de agentes de IA (Claude Code e Gemini CLI). O produto transforma backlogs de produto em sprints executáveis, gerenciando todo o pipeline de desenvolvimento de forma automatizada.
+## 🎯 O que é?
 
-### Proposta de Valor
-- **Redução de 70%** no tempo de planejamento de sprints
-- **Automatização completa** do pipeline de desenvolvimento
-- **Integração híbrida** de múltiplos agentes de IA
-- **Flexibilidade total** para diferentes tipos de projeto
-- **Código 100% open source** e extensível
+Imagine ter dois desenvolvedores experientes trabalhando para você:
+- **Claude** 🧠: O arquiteto pensador - planeja, analisa e resolve problemas complexos
+- **Gemini** ⚡: O executor rápido - implementa, testa e entrega resultados
 
-## 📚 Documentação Completa
+O Agent Orchestrator coordena esses dois "desenvolvedores IA" para transformar suas ideias em código real!
 
-Este projeto inclui documentação completa seguindo o fluxo de negócio e produto:
+## 🎬 Demo Rápida
 
-### 📋 Contexto dos Agentes
-- **[claude.md](claude.md)** - Contexto completo do Claude Code
-- **[gemini.md](gemini.md)** - Contexto completo do Gemini CLI
-
-### 🏢 Documentação de Negócio
-- **[docs/product/business_analysis.md](docs/product/business_analysis.md)** - Análise de negócio completa
-- **[docs/product/product_management.md](docs/product/product_management.md)** - Gestão de produto e roadmap
-- **[docs/product/product_ownership.md](docs/product/product_ownership.md)** - Backlog detalhado e user stories
-- **[docs/product/scrum_master.md](docs/product/scrum_master.md)** - Metodologia Scrum e processos
-- **[docs/product/architecture.md](docs/product/architecture.md)** - Arquitetura técnica e decisões
-
-## 🚀 Como Funciona
-
-### Fluxo de Trabalho
-```mermaid
-graph LR
-    A[Arquivo de Backlog] --> B[Persona SM]
-    B --> C[TASK-TRACKER.md]
-    C --> D[Persona DEV]
-    D --> E[Código Implementado]
-    E --> F[Logs e Relatórios]
-```
-
-### Comandos Principais
 ```bash
-# Análise de backlog
-agent_orchestrator analyze backlog.md
+# Instalar
+pip install agent-orchestrator
 
-# Geração de sprint
-agent_orchestrator sprint backlog.md --max-points 30
+# Criar um arquivo com suas ideias
+echo "Quero um sistema de blog com posts e comentários" > meu_projeto.md
 
-# Execução de tarefa única
-agent_orchestrator execute TASK-001
-
-# Execução de sprint completo
-agent_orchestrator sprint SPRINT-001
-
-# Execução de backlog completo
-agent_orchestrator backlog BACKLOG.md
+# Deixar a mágica acontecer!
+agent-orchestrator execute-backlog meu_projeto.md
 ```
 
-## 🎯 Características Principais
+Em minutos, você terá o código pronto! 🎉
 
-### Orquestração Inteligente
-- **Claude Code**: Análise profunda, planejamento, documentação
-- **Gemini CLI**: Execução rápida, prototipagem, validação
-- **Decisão Automática**: Sistema escolhe o agente ideal
-- **Fallback**: Se um falhar, outro assume
+## 📦 Instalação
 
-### Flexibilidade Total
-- **Qualquer Projeto**: Adaptável a diferentes tecnologias
-- **Qualquer Backlog**: Suporte a múltiplos formatos
-- **Qualquer Escala**: De tarefas únicas a projetos completos
-- **Qualquer Configuração**: Templates e configurações customizáveis
+### Pré-requisitos
+Você precisa ter instalado:
+- Python 3.10 ou superior
+- Claude CLI ([instruções](https://claude.ai/claude-cli))
+- Gemini CLI ([instruções](https://gemini.google.com/cli))
 
-### Automação Completa
-- **Análise**: Leitura e parsing automático de backlogs
-- **Planejamento**: Geração automática de sprints
-- **Execução**: Implementação automática de tarefas
-- **Validação**: Testes e qualidade automáticos
-- **Documentação**: Geração automática de documentação
+### Instalar o Agent Orchestrator
+```bash
+pip install agent-orchestrator
+```
 
-## 📊 Métricas de Sucesso
+### Verificar instalação
+```bash
+agent-orchestrator --version
+agent-orchestrator test-agents
+```
 
-### Produto
-- **Taxa de Sucesso**: > 95% das tarefas executadas
-- **Tempo de Execução**: < 30s para tarefas simples
-- **Qualidade**: > 80% cobertura de testes
-- **Performance**: < 100ms para comandos básicos
+## 🎮 Como Usar
 
-### Negócio
-- **Downloads**: 1.000+ instalações via pip
-- **Stars**: 100+ no GitHub
-- **Comunidade**: 10+ contribuições
-- **Satisfação**: NPS > 50
+### 1️⃣ Escreva suas ideias em Markdown
 
-## 🏗️ Arquitetura
+Crie um arquivo `projeto.md`:
 
-### Componentes Principais
-- **CLI Interface**: Interface de linha de comando
-- **Core Engine**: Orquestração e coordenação
-- **Agent Manager**: Gerenciamento de agentes
-- **I/O Layer**: Entrada/saída de dados
+```markdown
+# Meu Sistema de Tarefas
 
-### Padrões de Design
-- **Command Pattern**: Para comandos CLI
-- **Factory Pattern**: Para criação de agentes
-- **Strategy Pattern**: Para orquestração
-- **Repository Pattern**: Para I/O
+## Funcionalidades
 
-### Tecnologias
-- **Python 3.10**: Linguagem principal
-- **Pydantic**: Validação de dados
-- **Black**: Formatação de código
-- **pytest**: Framework de testes
+### TASK-001: Criar tarefas
+Como usuário, quero criar novas tarefas com título e descrição
+- Deve ter título (obrigatório)
+- Deve ter descrição (opcional)
+- Deve ter data de criação automática
 
-## 📋 Roadmap
+### TASK-002: Listar tarefas
+Como usuário, quero ver todas as minhas tarefas
+- Mostrar em ordem de criação
+- Mostrar título e status
+- Permitir filtrar por status
 
-### Fase 1: MVP (Meses 1-3)
-- ✅ Orquestração básica
-- ✅ Análise de backlog
-- ✅ Geração de sprint
-- ✅ Execução de tarefas
-- ✅ Logs e relatórios
+### TASK-003: Marcar como concluída
+Como usuário, quero marcar tarefas como concluídas
+- Mudar status para "concluído"
+- Registrar data de conclusão
+```
 
-### Fase 2: Crescimento (Meses 4-9)
-- 🔄 Templates avançados
-- 🔄 Integrações (GitHub, Jira)
-- 🔄 Dashboard web
-- 🔄 Configuração avançada
-- 🔄 Sistema de plugins
+### 2️⃣ Execute o comando mágico
 
-### Fase 3: Escala (Meses 10-18)
-- 📅 CI/CD integration
-- 📅 Multi-project support
-- 📅 Analytics avançados
-- 📅 Enterprise features
-- 📅 Mobile support
+```bash
+# Opção 1: Executar tudo de uma vez
+agent-orchestrator execute-backlog projeto.md
 
-### Fase 4: Dominância (Meses 19-36)
-- 🚀 AI Agents marketplace
-- 🚀 Cross-platform
-- 🚀 Cloud services
-- 🚀 API pública
-- 🚀 Machine learning
+# Opção 2: Ver o que será feito primeiro
+agent-orchestrator analyze-backlog projeto.md
+
+# Opção 3: Executar uma tarefa específica
+agent-orchestrator execute-task TASK-001
+```
+
+### 3️⃣ Acompanhe o progresso
+
+O Agent Orchestrator mostra tudo que está fazendo:
+
+```
+🤖 Claude analisando TASK-001...
+✅ Análise concluída em 2.3s
+🤖 Gemini implementando código...
+✅ Arquivo criado: task_manager.py
+✅ Testes criados: test_task_manager.py
+🎉 Tarefa TASK-001 concluída!
+```
+
+## 📚 Exemplos Práticos
+
+### Exemplo 1: API REST Simples
+
+```markdown
+# API de Produtos
+
+### TASK-001: Endpoint para listar produtos
+Como desenvolvedor, preciso de um endpoint GET /products
+- Retornar lista JSON
+- Incluir id, nome e preço
+
+### TASK-002: Endpoint para criar produto
+Como desenvolvedor, preciso de um endpoint POST /products
+- Receber nome e preço
+- Validar dados
+- Retornar produto criado
+```
+
+Comando:
+```bash
+agent-orchestrator execute-backlog api_produtos.md --agent claude
+```
+
+### Exemplo 2: Script de Automação
+
+```markdown
+# Automação de Backup
+
+### TASK-001: Backup de arquivos
+Como admin, quero fazer backup de uma pasta
+- Copiar todos os arquivos
+- Comprimir em ZIP
+- Adicionar data no nome do arquivo
+```
+
+Comando:
+```bash
+agent-orchestrator execute-task TASK-001 --agent gemini
+```
+
+## 🛠️ Comandos Disponíveis
+
+### Análise e Planejamento
+```bash
+# Analisar um backlog
+agent-orchestrator analyze-backlog arquivo.md
+
+# Gerar um sprint (conjunto de tarefas)
+agent-orchestrator generate-sprint arquivo.md --points 20
+```
+
+### Execução
+```bash
+# Executar uma tarefa específica
+agent-orchestrator execute-task TASK-001
+
+# Executar um backlog completo
+agent-orchestrator execute-backlog arquivo.md
+
+# Executar com agente específico
+agent-orchestrator execute-task TASK-001 --agent claude  # ou gemini
+```
+
+### Configuração e Status
+```bash
+# Testar conexão com os agentes
+agent-orchestrator test-agents
+
+# Ver configurações
+agent-orchestrator show-config
+
+# Configurar agentes
+agent-orchestrator configure-agents
+```
+
+## 📝 Formato do Backlog
+
+O Agent Orchestrator entende markdown simples. Cada tarefa deve ter:
+
+```markdown
+### TASK-XXX: Título da tarefa
+Descrição do que precisa ser feito
+- Detalhe 1
+- Detalhe 2
+- Detalhe 3
+```
+
+**Dicas:**
+- Use IDs únicos (TASK-001, FEAT-001, BUG-001)
+- Seja claro e específico
+- Liste critérios de aceite
+- Adicione exemplos quando possível
 
 ## 🎯 Casos de Uso
 
-### Desenvolvedor Individual
-```bash
-# Automatizar tarefas repetitivas
-agent_orchestrator execute TASK-001
+### Para Desenvolvedores Solo
+- **Prototipar rapidamente**: Transforme ideias em código funcional
+- **Automatizar tarefas chatas**: Deixe a IA fazer o trabalho repetitivo
+- **Aprender**: Veja como a IA implementa diferentes soluções
 
-# Focar em lógica de negócio
-agent_orchestrator analyze backlog.md
+### Para Times
+- **Acelerar desenvolvimento**: Complete sprints mais rápido
+- **Padronizar código**: IA segue sempre as mesmas práticas
+- **Documentar automaticamente**: Código vem com documentação
+
+### Para Estudantes
+- **Aprender programação**: Veja exemplos práticos
+- **Fazer projetos**: Complete trabalhos mais rápido
+- **Entender conceitos**: IA explica o que está fazendo
+
+## 🔧 Configuração Avançada
+
+### Escolher Agente Padrão
+```bash
+# Claude para tarefas complexas (padrão)
+agent-orchestrator execute-task TASK-001 --agent claude
+
+# Gemini para tarefas rápidas
+agent-orchestrator execute-task TASK-001 --agent gemini
+
+# Deixar o sistema escolher
+agent-orchestrator execute-task TASK-001 --agent auto
 ```
 
-### Tech Lead
+### Configurar Limites
 ```bash
-# Padronizar processos
-agent_orchestrator sprint SPRINT-001
+# Limitar pontos por sprint
+agent-orchestrator generate-sprint backlog.md --points 30
 
-# Aumentar produtividade da equipe
-agent_orchestrator backlog BACKLOG.md
+# Definir prioridade mínima
+agent-orchestrator generate-sprint backlog.md --priority high
 ```
 
-### Product Owner
+## 🐛 Resolução de Problemas
+
+### "Agente não encontrado"
 ```bash
-# Entregar valor rapidamente
-agent_orchestrator analyze backlog.md
-
-# Manter backlog organizado
-agent_orchestrator sprint BACKLOG.md --max-points 30
-```
-
-## 🔧 Instalação e Configuração
-
-### Pré-requisitos
-```bash
-# Python 3.10+
-python --version
-
-# Claude Code
-npm install -g @anthropic-ai/claude-code
-
-# Gemini CLI
-npm install -g @google/gemini-cli
-
-# BMAD-METHOD
-git clone https://github.com/bmadcode/BMAD-METHOD.git
-cd BMAD-METHOD
-./install.sh --full
-```
-
-### Instalação
-```bash
-# Via pip
-pip install agent-orchestrator
-
-# Via source
-git clone https://github.com/seu-repo/agent-orchestrator.git
-cd agent-orchestrator
-pip install -e .
-```
-
-### Configuração
-```bash
-# Configurar API keys
-export ANTHROPIC_API_KEY="sua-chave-claude"
-export GOOGLE_API_KEY="sua-chave-gemini"
-
 # Verificar instalação
-agent_orchestrator --help
+agent-orchestrator test-agents
+
+# Instalar Claude CLI
+npm install -g @anthropic-ai/claude-cli
+
+# Instalar Gemini CLI  
+npm install -g @google/gemini-cli
 ```
 
-## 📖 Exemplos de Uso
+### "Erro 429 - Muitas requisições"
+- Aguarde alguns minutos
+- Use `--agent claude` (geralmente tem limites maiores)
+- Configure suas próprias API keys
 
-### Exemplo 1: Projeto Novo
-```bash
-# 1. Criar backlog
-cat > backlog.md << EOF
-# Backlog - Sistema de Blog
+### "Tarefa falhou"
+- Verifique se a descrição está clara
+- Adicione mais detalhes e exemplos
+- Tente com outro agente
 
-### TASK-001: Criar posts
-Como autor, quero criar posts para compartilhar conteúdo
-Pontos: 5
-Prioridade: P1
+## 🤝 Contribuindo
 
-### TASK-002: Comentários em posts  
-Como leitor, quero comentar em posts para interagir
-Pontos: 3
-Prioridade: P2
-EOF
+Adoramos contribuições! Veja como ajudar:
 
-# 2. Executar orquestrador
-agent_orchestrator backlog backlog.md --max-points 8
-
-# 3. Verificar resultados
-ls output/
-cat output/TASK-TRACKER.md
-```
-
-### Exemplo 2: Sprint Específico
-```bash
-# Executar sprint específico
-agent_orchestrator sprint SPRINT-001
-
-# Ver progresso
-agent_orchestrator status
-```
-
-### Exemplo 3: Tarefa Única
-```bash
-# Executar tarefa específica
-agent_orchestrator execute TASK-001
-
-# Ver resultado
-cat output/task_TASK-001_result.md
-```
-
-## 🚨 Considerações Importantes
-
-### Segurança
-- **API Keys**: Armazenamento seguro de credenciais
-- **Validação**: Sempre revisar código gerado
-- **Ambiente**: Usar em desenvolvimento/teste
-- **Backup**: Manter versões anteriores
-
-### Limitações
-- **Dependência de APIs**: Requer conexão com serviços externos
-- **Custos**: Uso de tokens pode gerar custos
-- **Validação Humana**: Requer revisão de código gerado
-- **Complexidade**: Curva de aprendizado inicial
-
-## 🤝 Contribuição
-
-### Como Contribuir
-1. **Fork** o repositório
-2. **Crie** uma branch para sua feature
-3. **Implemente** suas mudanças
-4. **Teste** suas mudanças
-5. **Submeta** um pull request
-
-### Padrões de Código
-- **Python 3.10**: Versão mínima
-- **Black**: Formatação automática
-- **flake8**: Linting
-- **mypy**: Type checking
-- **pytest**: Testes
-
-### Documentação
-- **Docstrings**: 100% das funções documentadas
-- **Type Hints**: 100% das funções tipadas
-- **README**: Atualizado com mudanças
-- **CHANGELOG**: Histórico de mudanças
-
-## 📞 Suporte
-
-### Recursos
-- **[Documentação](docs/)**: Guias detalhados
-- **[Issues](https://github.com/seu-repo/agent-orchestrator/issues)**: Reportar problemas
-- **[Discussions](https://github.com/seu-repo/agent-orchestrator/discussions)**: Discussões da comunidade
-- **[Wiki](https://github.com/seu-repo/agent-orchestrator/wiki)**: Conhecimento compartilhado
-
-### Comunidade
-- **Slack**: Canal #agent-orchestrator
-- **Discord**: Servidor da comunidade
-- **Meetups**: Eventos presenciais
-- **Conferências**: Apresentações em eventos
+1. Reporte bugs: [Issues](https://github.com/luhfilho/agent-orchestrator/issues)
+2. Sugira melhorias: [Discussions](https://github.com/luhfilho/agent-orchestrator/discussions)
+3. Envie código: [Pull Requests](https://github.com/luhfilho/agent-orchestrator/pulls)
 
 ## 📄 Licença
 
-Este projeto está licenciado sob a **MIT License** - veja o arquivo [LICENSE](LICENSE) para detalhes.
+MIT - Use livremente em seus projetos!
 
-## 🙏 Agradecimentos
+## 🌟 Dicas Finais
 
-- **Anthropic**: Pelo Claude Code
-- **Google**: Pelo Gemini CLI
-- **BMAD-METHOD**: Pela metodologia
-- **Comunidade**: Por todas as contribuições
+1. **Comece simples**: Teste com uma tarefa antes de um backlog completo
+2. **Seja específico**: Quanto mais detalhes, melhor o resultado
+3. **Itere**: Se o resultado não ficou perfeito, refine a descrição
+4. **Experimente**: Cada agente tem seus pontos fortes
+5. **Divirta-se**: Deixe a IA trabalhar enquanto você foca no que importa!
 
 ---
 
-**Agent Orchestrator** - Transformando desenvolvimento de software através da orquestração inteligente de agentes de IA. 
+**Feito com ❤️ pela comunidade Agent Orchestrator**
+
+*Transformando ideias em código, uma tarefa por vez!* 🚀

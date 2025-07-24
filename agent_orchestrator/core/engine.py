@@ -408,5 +408,6 @@ class OrchestratorEngine:
             title=f"Task {task_id}",
             description=f"Descrição da task {task_id}",
             user_story_id="US-001",
-            agent_type="auto"
+            agent_type="auto",
+            acceptance_criteria=["Funcionalidade implementada conforme especificação"]
         ) 

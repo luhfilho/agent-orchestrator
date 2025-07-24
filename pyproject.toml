@@ -1,0 +1,86 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "agent-orchestrator"
+version = "1.0.0"
+description = "Orquestrador de Agentes de IA para Desenvolvimento de Software"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+authors = [
+    {name = "Agent Orchestrator Team", email = "team@agent-orchestrator.dev"},
+]
+maintainers = [
+    {name = "Agent Orchestrator Team", email = "team@agent-orchestrator.dev"},
+]
+keywords = [
+    "ai",
+    "agents", 
+    "orchestration",
+    "development",
+    "automation",
+    "claude",
+    "gemini",
+    "software-development",
+    "task-automation"
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: Software Development :: Quality Assurance",
+    "Topic :: Software Development :: Testing",
+    "Topic :: Software Development :: Build Tools",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+dependencies = [
+    "rich>=13.0.0",
+    "click>=8.0.0",
+    "pydantic>=2.0.0",
+    "pyyaml>=6.0",
+    "watchdog>=3.0.0",
+    "aiohttp>=3.8.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0.0",
+    "pytest-asyncio>=0.21.0",
+    "pytest-cov>=4.0.0",
+    "black>=23.0.0",
+    "flake8>=6.0.0",
+    "mypy>=1.0.0",
+    "pre-commit>=3.0.0",
+    "build>=0.10.0",
+    "twine>=4.0.2",
+]
+docs = [
+    "sphinx>=6.0.0",
+    "sphinx-rtd-theme>=1.2.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/luhfilho/agent-orchestrator"
+Documentation = "https://github.com/luhfilho/agent-orchestrator/blob/main/README.md"
+Repository = "https://github.com/luhfilho/agent-orchestrator.git"
+"Bug Tracker" = "https://github.com/luhfilho/agent-orchestrator/issues"
+Changelog = "https://github.com/luhfilho/agent-orchestrator/blob/main/CHANGELOG.md"
+
+[project.scripts]
+agent-orchestrator = "agent_orchestrator.cli.main:main"
+agent_orchestrator = "agent_orchestrator.cli.main:main"
+
+[tool.setuptools]
+packages = ["agent_orchestrator"]
+include-package-data = true
+
+[tool.setuptools.package-data]
+agent_orchestrator = ["py.typed"]

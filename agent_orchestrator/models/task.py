@@ -37,6 +37,7 @@ class Task(BaseModel):
     execution_time: Optional[float] = Field(None, description="Tempo de execução em segundos")
     priority: str = Field("medium", description="Prioridade da task")
     complexity: str = Field("medium", description="Complexidade da task")
+    acceptance_criteria: Optional[list] = Field(None, description="Critérios de aceite da task")
     
     @validator('id')
     def validate_id(cls, v):

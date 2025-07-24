@@ -25,7 +25,7 @@ setup(
     description="Orquestrador de Agentes de IA para Desenvolvimento de Software",
     long_description=read_readme(),
     long_description_content_type="text/markdown",
-    url="https://github.com/agent-orchestrator/agent-orchestrator",
+    url="https://github.com/luhfilho/agent-orchestrator",
     packages=find_packages(),
     classifiers=[
         "Development Status :: 3 - Alpha",
@@ -66,8 +66,8 @@ setup(
     zip_safe=False,
     keywords="ai, agents, orchestration, development, automation, claude, gemini",
     project_urls={
-        "Bug Reports": "https://github.com/agent-orchestrator/agent-orchestrator/issues",
-        "Source": "https://github.com/agent-orchestrator/agent-orchestrator",
-        "Documentation": "https://agent-orchestrator.readthedocs.io/",
+        "Bug Reports": "https://github.com/luhfilho/agent-orchestrator/issues",
+        "Source": "https://github.com/luhfilho/agent-orchestrator",
+        "Documentation": "https://github.com/luhfilho/agent-orchestrator/blob/main/README.md",
     },
 ) 

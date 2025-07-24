@@ -1,0 +1,39 @@
+# Include important files
+include README.md
+include LICENSE
+include CHANGELOG.md
+include requirements.txt
+include pytest.ini
+include config.yaml
+
+# Include all Python files
+recursive-include agent_orchestrator *.py
+
+# Include data files
+recursive-include agent_orchestrator *.yaml *.yml *.json
+
+# Include documentation
+recursive-include docs *.md *.rst *.txt
+
+# Include examples
+recursive-include examples *.py *.md *.yaml *.yml
+
+# Include test files
+recursive-include tests *.py
+
+# Include Cursor rules and GitHub files
+recursive-include .cursor *.mdc
+recursive-include .github *.md *.yml
+
+# Include web bundles
+recursive-include web-bundles *.md *.yml *.yaml
+
+# Exclude compiled files
+global-exclude *.pyc
+global-exclude *.pyo
+global-exclude __pycache__
+global-exclude *.so
+global-exclude .DS_Store
+global-exclude .git
+global-exclude .gitignore
+global-exclude *.egg-info
