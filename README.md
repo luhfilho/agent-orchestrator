@@ -31,7 +31,7 @@ Em minutos, você terá o código pronto! 🎉
 Você precisa ter instalado:
 - Python 3.10 ou superior
 - Claude CLI ([instruções](https://claude.ai/claude-cli))
-- Gemini CLI ([instruções](https://gemini.google.com/cli))
+- Gemini CLI ([instruções](https://cloud.google.com/gemini/docs/codeassist/gemini-cli?hl=pt-br))
 
 ### Instalar o Agent Orchestrator
 ```bash
